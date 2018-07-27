@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$theme-color: #1a85ff;
+
 html {
   font-family: sans-serif;
 }
@@ -29,6 +31,7 @@ h6 {
   margin-bottom: -5px;
 }
 
+//NAVIGATION
 .navbar {
   padding: 0 0;
   background: white;
@@ -62,7 +65,6 @@ h6 {
 
   .navbar-light, .new-post-btn {
     font-size: 12px;
-    text-transform: uppercase;
     font-weight: 500;
   }
 
@@ -70,10 +72,16 @@ h6 {
     margin-right: 35px;
   }
 
-  .new-post-btn, .btn-primary:hover {
+  .new-post-btn {
     font-weight: 200;
-    background: #1a85ff;
-    border-color: #1a85ff;
+    background: $theme-color;
+    border-color: $theme-color;
+    transition: 0s;
+
+    &:hover {
+      box-shadow: 0 2px black;
+      background: $theme-color;
+    }
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -88,24 +96,100 @@ h6 {
     }
   }
 
-  .main-header {
-    width: 100%;
-    margin-top: 55px;
-    padding: 100px 0;
+//INDEX PAGE BODY
+.main-header {
+  width: 100%;
+  margin-top: 55px;
+  padding: 100px 0;
+  text-align: center;
+}
+
+  .article-box {
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+    color: black;
+    margin: 15px 0px;
+
+    .article-txt-box {
+      padding: 20px 20px;
+    }
+
+    .article-title {
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+    }
+  }
+
+//FORM MODAL
+.close-marker {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 2rem;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.modal-header {
+  border-bottom: none;
+  align-items: center;
+  justify-content: center;
+}
+
+  .new-post-title {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    color: $theme-color;
+    font-weight: bold;
+  }
+
+  .close-marker:focus, .close-marker:hover {
+    opacity: 1;
+    color: white;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .form-box {
     text-align: center;
   }
 
-    .article-box {
-      box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
-      color: black;
-      margin: 15px 0px;
+    .field-text {
+      width: 100%;
+      font-size: 0.9rem;
+      border: 2px solid rgba(26,133,255,0.25);
+      border-radius: 4px;
+      transition: border-color 0.5s;
 
-      .article-txt-box {
-        padding: 20px 20px;
-      }
-
-      .article-title {
-        font-size: 1.8rem;
-        line-height: 2.3rem;
+      &:focus {
+        border: 2px solid rgba(26,133,255,0.5);
+        outline: none;
+        // transition: border-color 0.5s;
       }
     }
+
+    .submit-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      .form-btn {
+        background: $theme-color;
+        margin: 0 10px;
+        border: none;
+        width: 128px;
+        font-size: 0.75rem;
+
+        &:hover {
+          filter: brightness(70%);
+          transition: filter 0.25s ease-out;
+        }
+      }
+    }
+
+//UPPERCASE CLASSES
+.navbar-light, .new-post-btn, .new-post-title, .form-btn {
+  text-transform: uppercase;
+}

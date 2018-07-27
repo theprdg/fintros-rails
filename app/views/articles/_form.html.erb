@@ -9,34 +9,30 @@
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :img %><br>
-    <%= form.text_field :img, value: rand(1..8) %>
-  </p>
+  <div class="form-box">
+    <p>
+      <%= form.text_field :img, class: "hide", value: rand(1..8) %>
+    </p>
 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+    <p>
+      <%= form.text_field :title, placeholder: :title, class: "field-text" %>
+    </p>
 
-  <p>
-    <%= form.label :author %><br>
-    <%= form.text_field :author %>
-  </p>
+    <p>
+      <%= form.text_field :author, placeholder: :author, class: "field-text" %>
+    </p>
 
-  <p>
-    <%= form.label :summary %><br>
-    <%= form.text_field :summary %>
-  </p>
+    <p>
+      <%= form.text_area :summary, placeholder: :summary, class: "field-text" %>
+    </p>
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
-
-  <div>
-    <%= form.submit %>
-    <%= button_to 'Close', {type: 'button' }, {class: 'btn btn-secondary', 'data-dismiss': "modal"} %>
+    <p>
+      <%= form.text_area :text, placeholder: :text, class: "field-text" %>
+    </p>
+  </div>
+  <div class="submit-box">
+    <%= form.submit 'Create Article', class: 'btn btn-secondary form-btn' %>
+    <%= button_to 'Close', {type: 'button' }, {class: 'btn btn-secondary form-btn', 'data-dismiss': "modal"} %>
   </div>
 
 <% end %>
