@@ -1,33 +1,30 @@
-<p>
-  <strong>Img:</strong>
-  <%= @article.img %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @article.author %>
-</p>
-
-<p>
-  <strong>Summary:</strong>
-  <%= @article.summary %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-
-<a data-toggle="modal" data-target="#formModal">Edit</a> | 
-<%= link_to 'Delete', article_path(@article),
-        method: :delete,
-        data: { confirm: 'Delete this article?' } %> |
-<%= link_to 'Back', articles_path %>
+<div class="container">
+  <div class="article-header">
+    <div class="title-center">
+      <%= image_tag("/assets/#{@article.img}", class: "img-fluid") %>
+      <div class="text-box">
+        <h1 class="article-title title-center">
+          <%= @article.title %>
+        </h1>
+        
+        <div class="article-format">
+          <a href="#" data-toggle="modal" data-target="#formModal">Edit</a> | 
+          <%= link_to 'Delete', article_path(@article),
+              method: :delete,
+              data: { confirm: 'Delete this article?' } %>
+        </div>
+        
+        <div class="meta title-center">  
+          by <%= @article.author %> — <%= @article.created_at %>
+        </div>
+        
+        <p class="article-text">
+          <%= @article.text %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
@@ -41,7 +38,7 @@
       </div>
       <div class="modal-body">
 
-        <%= render 'form' %>
+        <%= render 'editform' %>
         
       </div>
     </div>

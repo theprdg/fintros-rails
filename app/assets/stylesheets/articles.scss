@@ -31,6 +31,10 @@ h6 {
   margin-bottom: -5px;
 }
 
+a {
+  color: black;
+}
+
 //NAVIGATION
 .navbar {
   padding: 0 0;
@@ -39,7 +43,14 @@ h6 {
   height: 55px;
 }
 
-  .navbar-light {
+  .navbar-toggler {
+    margin-right: 20px;
+    border: none;
+  }
+
+  .navbar-nav {
+    background: white;
+    float: right;
     padding-right: 50px;
   }
 
@@ -112,11 +123,17 @@ h6 {
     .article-txt-box {
       padding: 20px 20px;
     }
+  }
 
-    .article-title {
-      font-size: 1.8rem;
-      line-height: 2.3rem;
-    }
+  .article-title {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+
+  .article-text {
+    line-height: 2rem;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
   }
 
 //FORM MODAL
@@ -189,7 +206,52 @@ h6 {
       }
     }
 
+//ARTICLE PAGE
+.article-header {
+  width: 40vw;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+  .text-box {
+    margin: 60px auto;
+    font-weight: 200;
+  }
+
+  .title-center {
+    text-align: center;
+  }
+
+  .meta {
+    color: #4c4c4c;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 36px;
+    font-size: 0.9rem;
+  }
+
+  .article-format {
+    font-weight: bold;
+    padding: 20px 0;
+  }
+
+  .article-format, .article-text {
+    text-align: left;
+  }
+
 //UPPERCASE CLASSES
 .navbar-light, .new-post-btn, .new-post-title, .form-btn {
   text-transform: uppercase;
+}
+
+//REPSONSIVENESS
+@media (max-width: 992px) {
+  .navbar-nav {
+    padding: 20px 20px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+  }
+
+  .mt-2 {
+    margin-top: 0.6rem !important;
+  }
 }
