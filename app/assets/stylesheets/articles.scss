@@ -1,0 +1,111 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  font-family: sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.9rem;
+  font-weight: bold;
+}
+
+h6 {
+  letter-spacing: -0.08rem;
+  line-height: 18px;
+  margin-bottom: -5px;
+}
+
+.navbar {
+  padding: 0 0;
+  background: white;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+  height: 55px;
+}
+
+  .navbar-light {
+    padding-right: 50px;
+  }
+
+  .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 30px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-weight: 400;
+  }
+
+  .vert {
+    margin-left: 5px;
+  }
+
+  .fin-logo {
+    margin-left: 10px;
+    height: 40px;
+    vertical-align: middle;
+  }
+
+  .navbar-light, .new-post-btn {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .nav-item {
+    margin-right: 35px;
+  }
+
+  .new-post-btn, .btn-primary:hover {
+    font-weight: 200;
+    background: #1a85ff;
+    border-color: #1a85ff;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0px 0px;
+  }
+
+  .nav-link {
+    margin-top: 8px;
+
+    &:hover {
+      border-bottom: 2px solid black;
+    }
+  }
+
+  .main-header {
+    width: 100%;
+    margin-top: 55px;
+    padding: 100px 0;
+    text-align: center;
+  }
+
+    .article-box {
+      box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+      color: black;
+      margin: 15px 0px;
+
+      .article-txt-box {
+        padding: 20px 20px;
+      }
+
+      .article-title {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+      }
+    }

@@ -1,0 +1,42 @@
+<%= form_with model: @article, local: true do |form| %>
+
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+    Oh Snap! Here's what went wrong:
+      <% @article.errors.full_messages.each do |msg| %>
+        <div>- <%= msg %></div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :img %><br>
+    <%= form.text_field :img, value: rand(1..8) %>
+  </p>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :author %><br>
+    <%= form.text_field :author %>
+  </p>
+
+  <p>
+    <%= form.label :summary %><br>
+    <%= form.text_field :summary %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <div>
+    <%= form.submit %>
+    <%= button_to 'Close', {type: 'button' }, {class: 'btn btn-secondary', 'data-dismiss': "modal"} %>
+  </div>
+
+<% end %>

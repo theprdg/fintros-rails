@@ -1,0 +1,2 @@
+class AddImgToArticle < ApplicationRecord
+end
