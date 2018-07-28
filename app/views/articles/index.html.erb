@@ -8,7 +8,7 @@
     <% @articles.reverse_each do |article| %>
       <%= link_to article_path(article), class: "col-md-12 col-lg-6" do %>
         <div class='article-box'>
-          <%= image_tag("/assets/images/#{article.img}.png", class: "img-fluid")%>
+          <%= image_tag("/assets/#{article.img}.png", class: "img-fluid")%>
           <div class="article-txt-box">
             <h3 class="article-title"><%= article.title %></h3>
             <%= article.summary %>
