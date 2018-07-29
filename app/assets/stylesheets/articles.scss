@@ -34,10 +34,10 @@ a {
 
 // NAVIGATION
 .navbar {
-  padding: 0 0;
+  padding: 10px 0;
   background: white;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
-  height: 55px;
+  max-height: 60px;
 }
 
   .navbar-toggler {
@@ -259,7 +259,7 @@ a {
 @media (max-width: 767px) {
   .navbar-nav {
     padding: 20px 20px;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.08);
   }
 
     .fintros {
@@ -267,7 +267,8 @@ a {
     }
 
     .mt-2 {
-      margin-top: 15px !important;
+      margin-top: 10px !important;
+      z-index: -1;
     }
 
     .nav-item {
