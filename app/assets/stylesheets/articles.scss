@@ -6,6 +6,7 @@ $theme-color: #1a85ff;
 
 html {
   font-family: sans-serif;
+  // min-width: 320px;
 }
 
 a:hover {
@@ -64,7 +65,7 @@ a {
     font-weight: 400;
   }
 
-  .vert {
+  .fintros {
     margin-left: 5px;
   }
 
@@ -79,8 +80,9 @@ a {
     font-weight: 500;
   }
 
-  .nav-item {
-    margin-right: 35px;
+  .mt-2 {
+    margin-top: 0 !important;
+    text-align: center;
   }
 
   .new-post-btn {
@@ -99,8 +101,12 @@ a {
     padding: 0px 0px;
   }
 
+  .nav-item {
+    margin-right: 20px;
+  }
+
   .nav-link {
-    margin-top: 8px;
+    // margin-top: 8px;
 
     &:hover {
       border-bottom: 2px solid black;
@@ -108,33 +114,46 @@ a {
   }
 
 //INDEX PAGE BODY
-.main-header {
-  width: 100%;
-  margin-top: 55px;
-  padding: 100px 0;
-  text-align: center;
+.container {
+  padding: 0;
 }
 
-  .article-box {
-    box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
-    color: black;
-    margin: 15px 0px;
+  .main-header {
+    width: 100%;
+    margin-top: 55px;
+    padding: 100px 0;
+    text-align: center;
+  }
 
-    .article-txt-box {
-      padding: 20px 20px;
+    .grid {
+      margin: 0 auto;
     }
-  }
 
-  .article-title {
-    font-size: 1.8rem;
-    line-height: 2.3rem;
-  }
+    .col-sm-12 {
+      max-width: 100vw;
+      margin-bottom: 30px;
+    }
 
-  .article-text {
-    line-height: 2rem;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-  }
+    .article-box {
+      box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+      color: black;
+      height: 100%;
+
+      .article-txt-box {
+        padding: 20px 20px;
+      }
+    }
+
+    .article-title {
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+    }
+
+    .article-text {
+      line-height: 2rem;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
 
 //FORM MODAL
 .close-marker {
@@ -244,14 +263,26 @@ a {
   text-transform: uppercase;
 }
 
-//REPSONSIVENESS
-@media (max-width: 992px) {
+//RESPONSIVENESS
+@media (max-width: 768px) {
   .navbar-nav {
     padding: 20px 20px;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
   }
 
-  .mt-2 {
-    margin-top: 0.6rem !important;
+    .fintros {
+      display: none;
+    }
+
+    .mt-2 {
+      margin-top: 15px !important;
+    }
+
+    .nav-item {
+      margin-right: 0px;
+    }
+
+  .col-sm-12 {
+    padding: 0;
   }
 }
