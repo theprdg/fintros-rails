@@ -1,12 +1,8 @@
-// Place all the styles related to the Articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 $theme-color: #1a85ff;
 
 html {
   font-family: sans-serif;
-  // min-width: 320px;
+  min-width: 360px;
 }
 
 a:hover {
@@ -36,7 +32,7 @@ a {
   color: black;
 }
 
-//NAVIGATION
+// NAVIGATION
 .navbar {
   padding: 0 0;
   background: white;
@@ -48,7 +44,7 @@ a {
     margin-right: 20px;
     border: none;
   }
-
+  
   .navbar-nav {
     background: white;
     float: right;
@@ -105,15 +101,11 @@ a {
     margin-right: 20px;
   }
 
-  .nav-link {
-    // margin-top: 8px;
-
-    &:hover {
-      border-bottom: 2px solid black;
-    }
+  .nav-link:hover {
+    border-bottom: 2px solid black;
   }
 
-//INDEX PAGE BODY
+// INDEX PAGE BODY
 .container {
   padding: 0;
 }
@@ -155,7 +147,7 @@ a {
       font-size: 1.2rem;
     }
 
-//FORM MODAL
+// FORM MODAL
 .close-marker {
   position: absolute;
   top: 10px;
@@ -202,7 +194,6 @@ a {
       &:focus {
         border: 2px solid rgba(26,133,255,0.5);
         outline: none;
-        // transition: border-color 0.5s;
       }
     }
 
@@ -225,19 +216,20 @@ a {
       }
     }
 
-//ARTICLE PAGE
+// ARTICLE PAGE
 .article-header {
-  width: 40vw;
   margin: 0 auto;
   margin-top: 150px;
+  max-width: 640px;
 }
 
   .text-box {
     margin: 60px auto;
     font-weight: 200;
+    padding: 20px 20px;
   }
 
-  .title-center {
+  .article-center {
     text-align: center;
   }
 
@@ -263,8 +255,8 @@ a {
   text-transform: uppercase;
 }
 
-//RESPONSIVENESS
-@media (max-width: 768px) {
+// RESPONSIVENESS
+@media (max-width: 767px) {
   .navbar-nav {
     padding: 20px 20px;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
