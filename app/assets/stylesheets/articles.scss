@@ -81,6 +81,10 @@ a {
     text-align: center;
   }
 
+  .menu-box {
+    align-items: center;
+  }
+
   .new-post-btn {
     font-weight: 200;
     background: $theme-color;
@@ -93,16 +97,20 @@ a {
     }
   }
 
-  .navbar-expand-lg .navbar-nav .nav-link {
+  .navbar .navbar-nav .nav-link {
     padding: 0px 0px;
+
   }
 
   .nav-item {
     margin-right: 20px;
+    display: flex;
+    align-items: center;
   }
 
   .nav-link:hover {
     border-bottom: 2px solid black;
+    margin-top: 2px;
   }
 
 // INDEX PAGE BODY
